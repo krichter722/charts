@@ -15,7 +15,7 @@ metadata:
 {{ toYaml .Values.alertmanager.service.annotations | indent 4 }}
 {{- end }}
 spec:
-{{- if .Values.alertmanager.service.clusterIP }}
+{{- if and .Values.alertmanager.service.clusterIP ( not .Values.alertmanager.service.omitClusterIP ) }}
   clusterIP: {{ .Values.alertmanager.service.clusterIP }}
 {{- end }}
 {{- if .Values.alertmanager.service.externalIPs }}

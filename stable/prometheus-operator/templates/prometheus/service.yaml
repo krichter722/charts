@@ -16,7 +16,7 @@ metadata:
 {{ toYaml .Values.prometheus.service.annotations | indent 4 }}
 {{- end }}
 spec:
-{{- if .Values.prometheus.service.clusterIP }}
+{{- if and .Values.prometheus.service.clusterIP ( not .Values.prometheus.service.clusterIP ) }}
   clusterIP: {{ .Values.prometheus.service.clusterIP }}
 {{- end }}
 {{- if .Values.prometheus.service.externalIPs }}

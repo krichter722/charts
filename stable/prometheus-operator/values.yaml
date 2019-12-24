@@ -180,6 +180,7 @@ alertmanager:
   service:
     annotations: {}
     labels: {}
+    omitClusterIP: false
     clusterIP: ""
 
     ## Port for Alertmanager Service to listen on
@@ -1020,6 +1021,7 @@ prometheusOperator:
   service:
     annotations: {}
     labels: {}
+    omitClusterIP: false
     clusterIP: ""
 
   ## Port to expose on each node
@@ -1206,6 +1208,7 @@ prometheus:
   service:
     annotations: {}
     labels: {}
+    omitClusterIP: false
     clusterIP: ""
 
     ## Port for Prometheus Service to listen on
