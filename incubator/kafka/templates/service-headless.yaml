@@ -16,6 +16,8 @@ spec:
 {{- if .Values.headless.targetPort }}
     targetPort: {{ .Values.headless.targetPort }}
 {{- end }}
+{{- if not .Values.omitClusterIP }}
   clusterIP: None
+{{- end }}
   selector:
   {{- include "kafka.broker.matchLabels" . | nindent 4 }}

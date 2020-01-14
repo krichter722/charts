@@ -38,6 +38,8 @@ updateStrategy:
 ## ref: https://kubernetes.io/docs/tutorials/stateful-application/basic-stateful-set/#pod-management-policy
 podManagementPolicy: OrderedReady
 
+omitClusterIP: false
+
 ## Useful if using any custom authorizer
 ## Pass in some secrets to use (if required)
 # secrets:
