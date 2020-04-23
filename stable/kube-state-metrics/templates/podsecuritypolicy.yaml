@@ -16,6 +16,7 @@ spec:
   privileged: false
   volumes:
     - 'secret'
+    - 'projected'
   hostNetwork: false
   hostIPC: false
   hostPID: false
